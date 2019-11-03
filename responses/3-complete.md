@@ -1,0 +1,3 @@
+**Congratulations! You finished the course!**
+
+TensorFlow really thrives with large datasets, ones much larger than a couple hundred Pokémon entries. That being said, it was pretty accurate here! Improvement is always a possibility, however. There are some tweaks we can make as well, such as changing the layers the model is built on, and how the model is compiled. Try tweaking those parameters and see if you can improve! 
