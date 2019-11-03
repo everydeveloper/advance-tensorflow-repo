@@ -1,3 +1,5 @@
+*That's right!* We need to train 🏋️ our data before we test 🧪 it.
+
 Now that the model is trained to our training data, we can test it against our training data:
 
 ```
@@ -29,4 +31,4 @@ predictor(test_data, test_labels, 149)
 
 Nice! It accurately predicted Mewtwo was a legendary Pokémon.
 
-*Close this issue when have a predict function that is working* 
+*Close this issue when you have a predict function that is working* 

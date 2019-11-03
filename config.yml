@@ -110,7 +110,7 @@ steps:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
-        right: 'FALSE'
+        right: 'False'
         else: 
           - type: respond
             with: incorrect.md

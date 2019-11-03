@@ -10,18 +10,21 @@ First, we need to read in the CSV file. We'll be doing so using Pandas:
 
 First, let's see what the categories of data are. This was also available on the Kaggle page, but that won't be the case for most real-world data:
 
-`df.columns
+```
+df.columns
 >>> Index(['Number', 'Name', 'Type_1', 'Type_2', 'Total', 'HP', 'Attack',
        'Defense', 'Sp_Atk', 'Sp_Def', 'Speed', 'Generation', 'isLegendary',
        'Color', 'hasGender', 'Pr_Male', 'Egg_Group_1', 'Egg_Group_2',
        'hasMegaEvolution', 'Height_m', 'Weight_kg', 'Catch_Rate',
        'Body_Style'],
-      dtype='object')`
-
+      dtype='object')
+```
 
 Okay so we have a lot of types of data here! Some of these descriptions might be confusing to those who aren't very familiar with the games. That's okay, we'll narrow our focus a little and only select categories we think will be relevant. It's always nice to have more data to train the model with, but it also takes time to clean and prepare that data. We'll be keeping it simple here:
 
-`df = df[['Name', 'isLegendary','Generation', 'Type_1', 'Type_2', 'HP', 'Attack', 'Defense', 'Sp_Atk', 'Sp_Def', 'Speed','Color','Egg_Group_1','Height_m','Weight_kg','Body_Style']]
+```
+df = df[['Name', 'isLegendary','Generation', 'Type_1', 'Type_2', 'HP', 'Attack', 'Defense', 'Sp_Atk', 'Sp_Def', 'Speed','Color','Egg_Group_1','Height_m','Weight_kg','Body_Style']]
+```
 
 *Which library did we use to read our CSV file?*
 
