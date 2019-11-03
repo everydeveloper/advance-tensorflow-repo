@@ -1,6 +1,6 @@
-title: Introduction to TensorFlow
-tagline: Learn the basics of TensorFlow (machine learning with python)
-description: Machine Learning (ML)/Neural Network (NN) tools have recently made a huge splash with applications in data analysis, image classification, and data generation. Here we will use the Fashion MNIST dataset to classify images of clothing.
+title: Advance TensorFlow
+tagline: Continue learning about TensorFlow
+description: Use TensorFlow to predict Pokemon stats.
 tags:
   - TensorFlow
   - Python
