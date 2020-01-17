@@ -1,4 +1,4 @@
-title: Advance TensorFlow
+title: TensorFlow Text-based Predictions
 tagline: Continue learning about TensorFlow
 description: Use TensorFlow to predict Pokemon stats.
 tags:
@@ -6,61 +6,57 @@ tags:
   - Python
   - Machine learning
   - Neural network
-
 template:
-  name: Advance TensorFlow Course
+  name: TensorFlow Pokemon Course
   repo: false
 before:
   - type: createIssue
     title: Install and setup environment
     body: 1-setup.md
-
 steps:
   - title: Install and setup environment
     description: Install packages and format data for machine learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: respond
         with: 1-dataset.md
         issue: 1
-        data: 
+        data:
           pokemon: '%payload.comment.body%'
-
   - title: Downloading dataset
     description: Download a CSV file with Pokemon data
     event: issue_comment
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: pandas
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 1
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: pandas
       - type: respond
         with: 1-format.md
         issue: 1
-
   - title: Formatting Data
     description: Format the data to be used in machine learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: D
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 1
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: D
       - type: respond
@@ -69,31 +65,29 @@ steps:
       - type: createIssue
         title: Normalize and Split Data
         body: 2-normalize.md
-
   - title: Normalize data
     description: Scale data for machine learning
     event: issue_comment
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 'True'
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 2
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'True'
       - type: respond
         with: 2-split.md
         issue: 2
-
   - title: Spliting Data
     description: Split data into training and test groups
     event: issues.closed
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: createIssue
         title: Compile and Evaluate Model
@@ -101,31 +95,29 @@ steps:
       - type: respond
         with: 2-complete.md
         issue: 2
-
   - title: Compile
     description: Compile and fit data using a model
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
         right: 'False'
-        else: 
+        else:
           - type: respond
             with: incorrect.md
             issue: 3
-            data: 
+            data:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'False'
       - type: respond
         with: 3-evaluate.md
         issue: 3
-
   - title: Evaluate Data
     description: Predict legendary status using our model
     event: issues.closed
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: respond
         with: 3-complete.md

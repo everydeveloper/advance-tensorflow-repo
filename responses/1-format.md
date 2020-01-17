@@ -18,7 +18,7 @@ def dummy_creation(df, dummy_categories):
         df_dummy = pd.get_dummies(df[i])
         df = pd.concat([df,df_dummy],axis=1)
         df = df.drop(i, axis=1)
-    return(df)`
+    return(df)
 ```
 
 This function first uses `pd.get_dummies` to create a dummy DataFrame of that category. As it's a seperate DataFrame, we'll need to `concat`enate it to our original DataFrame. And since we now have the variables represented properly as separate columns, we `drop` the original column. Having this in a function is nice because we can quickly do this for many categories:

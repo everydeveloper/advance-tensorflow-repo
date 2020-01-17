@@ -15,4 +15,4 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 ```
 
-*Leave a comment with your favorite Pokémon to continue.*
+*Leave a comment with your favorite Pokémon (such as Pikachu) to continue.*
