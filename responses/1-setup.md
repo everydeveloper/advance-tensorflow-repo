@@ -12,7 +12,7 @@ from tensorflow import keras
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
+from sklearn import preprocessing
 ```
 
 *Leave a comment with your favorite Pokémon (such as Pikachu) to continue.*

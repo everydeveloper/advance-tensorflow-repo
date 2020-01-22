@@ -1,6 +1,6 @@
-title: TensorFlow Text-based Predictions
-tagline: Continue learning about TensorFlow
-description: Use TensorFlow to predict Pokemon stats.
+title: Get Started with TensorFlow
+tagline: Create text-based predictions using Machine Learning (ML) and Python
+description: Predict Pokemon stats with the help of the TensorFlow library
 tags:
   - TensorFlow
   - Python
@@ -63,10 +63,12 @@ steps:
         with: 1-complete.md
         issue: 1
       - type: createIssue
-        title: Normalize and Split Data
-        body: 2-normalize.md
-  - title: Normalize data
-    description: Scale data for machine learning
+        title: Split and Normalize Data
+        body: 2-split.md
+      - type: closeIssue
+        issue: '1'
+  - title: Splitting data
+    description: Split data into training and test groups
     event: issue_comment
     link: '{{ repoUrl }}/issues/2'
     actions:
@@ -82,10 +84,10 @@ steps:
               commentBody: '%payload.comment.body%'
               correctAnswer: 'True'
       - type: respond
-        with: 2-split.md
+        with: 2-normalize.md
         issue: 2
-  - title: Spliting Data
-    description: Split data into training and test groups
+  - title: Normalizing Data
+    description: 
     event: issues.closed
     link: '{{ repoUrl }}/issues/2'
     actions:

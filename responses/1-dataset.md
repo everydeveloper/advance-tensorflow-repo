@@ -23,7 +23,7 @@ df.columns
 Okay so we have a lot of types of data here! Some of these descriptions might be confusing to those who aren't very familiar with the games. That's okay, we'll narrow our focus a little and only select categories we think will be relevant. It's always nice to have more data to train the model with, but it also takes time to clean and prepare that data. We'll be keeping it simple here:
 
 ```
-df = df[['Name', 'isLegendary','Generation', 'Type_1', 'Type_2', 'HP', 'Attack', 'Defense', 'Sp_Atk', 'Sp_Def', 'Speed','Color','Egg_Group_1','Height_m','Weight_kg','Body_Style']]
+df = df[['isLegendary','Generation', 'Type_1', 'Type_2', 'HP', 'Attack', 'Defense', 'Sp_Atk', 'Sp_Def', 'Speed','Color','Egg_Group_1','Height_m','Weight_kg','Body_Style']]
 ```
 
 *Which library did we use to read our CSV file?*
