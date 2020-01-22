@@ -62,11 +62,11 @@ steps:
       - type: respond
         with: 1-complete.md
         issue: 1
+      - type: closeIssue
+        issue: '1'
       - type: createIssue
         title: Split and Normalize Data
         body: 2-split.md
-      - type: closeIssue
-        issue: '1'
   - title: Splitting data
     description: Split data into training and test groups
     event: issue_comment
@@ -82,7 +82,7 @@ steps:
             issue: 2
             data:
               commentBody: '%payload.comment.body%'
-              correctAnswer: 'True'
+              correctAnswer: 1
       - type: respond
         with: 2-normalize.md
         issue: 2
