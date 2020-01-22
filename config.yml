@@ -63,7 +63,7 @@ steps:
         with: 1-complete.md
         issue: 1
       - type: closeIssue
-        issue: '1'
+        issue: 1
       - type: createIssue
         title: Split and Normalize Data
         body: 2-split.md
