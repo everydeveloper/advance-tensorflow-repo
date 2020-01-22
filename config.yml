@@ -87,7 +87,7 @@ steps:
         with: 2-normalize.md
         issue: 2
   - title: Normalizing Data
-    description: 
+    description: Scale data for machine learning
     event: issues.closed
     link: '{{ repoUrl }}/issues/2'
     actions:
