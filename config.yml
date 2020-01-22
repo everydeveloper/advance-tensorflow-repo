@@ -75,7 +75,7 @@ steps:
       - type: gate
         left: '%payload.comment.body%'
         operator: ==
-        right: 'True'
+        right: '1'
         else:
           - type: respond
             with: incorrect.md

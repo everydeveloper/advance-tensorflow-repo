@@ -33,4 +33,4 @@ This function extracts the data from the DataFrame and puts it into arrays that 
 train_data, train_labels, test_data, test_labels = label_delineator(df_train, df_test, 'isLegendary')
 ```
 
-*Close this issue when you are finished splitting the data.*
+*Comment with the generation number we used in the test dataset.*

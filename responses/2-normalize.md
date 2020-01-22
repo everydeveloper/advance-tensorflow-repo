@@ -1,4 +1,4 @@
-Now that we have our labels extracted from the data, let's normalize the data so everything is on the same scale:
+That's right! And now that we have our labels extracted from the data, let's normalize the data so everything is on the same scale:
 
 ```
 def data_normalizer(train_data, test_data):
@@ -22,4 +22,4 @@ model.add(keras.layers.Dense(500, activation='relu', input_shape=[length,]))
 model.add(keras.layers.Dense(2, activation='softmax'))
 ```
 
-**True or False**: *We normalize data so that everything is on the same scale.*
+*Close this issue when you are finished normalizing the data.*
