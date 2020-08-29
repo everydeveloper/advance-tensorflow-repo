@@ -4,7 +4,7 @@ Now that the model is trained to our training data, we can test it against our t
 
 ```
 loss_value, accuracy_value = model.evaluate(test_data, test_labels)
-print(f'Our test accuracy was {accuracy_value})'
+print(f'Our test accuracy was {accuracy_value}')
 >>> Our test accuracy was 0.980132
 ```
 
